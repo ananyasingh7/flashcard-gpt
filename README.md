@@ -1,70 +1,47 @@
-# Getting Started with Create React App
+# Flashcard-GPT
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Flashcard-GPT is an AI-based application designed to assist students in generating flashcards based on their notes and provided text. This application aims to provide a convenient tool for studying and learning, particularly for individuals returning to school. The application utilizes advanced technologies to automate the flashcard generation process.
 
-## Available Scripts
+## Tech Stack
 
-In the project directory, you can run:
+- Front-end: React, Redux, Tailwind CSS
+- Backend: PostgreSQL
+- AI: ChatGPT
+- Additional Technologies: Electron.js, MongoDB (exploratory)
 
-### `npm start`
+## Project Status
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+The project is currently in its early stages, with minimal commits. The focus is on structuring the project and developing the user interface (UI) while identifying additional features for the minimum viable product (MVP).
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Features (Planned)
 
-### `npm test`
+- AI-powered flashcard generation based on user-provided notes and text
+- User-friendly interface for managing and organizing flashcards
+- Integration with PostgreSQL for data storage and retrieval
+- Exploratory integration with MongoDB for expanded functionality
+- Electron.js integration for desktop application development
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Getting Started
 
-### `npm run build`
+To get started with Flashcard-GPT, follow these steps:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+1. Clone the repository: `git clone https://github.com/ananyasingh7/flashcard-gpt`
+2. Install dependencies: `npm install`
+3. Start the development server: `npm start`
+4. Access the application in your web browser: `http://localhost:3000`
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Contributing
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Contributions to Flashcard-GPT are welcome! If you'd like to contribute, please create a PR or reach out to me!
 
-### `npm run eject`
+## License
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+This project is licensed under the [MIT License](LICENSE).
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Acknowledgments
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+- This project utilizes the power of ChatGPT to generate flashcards.
+- The React, Redux, and Tailwind CSS frameworks are instrumental in building the front-end.
+- PostgreSQL provides a reliable database solution for data storage and retrieval.
+- Electron.js and MongoDB are being explored for potential integration into the project.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
