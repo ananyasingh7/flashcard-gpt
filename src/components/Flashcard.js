@@ -1,5 +1,5 @@
 import React from 'react';
-import './Flashcard.css';
+import '../index.css';
 
 const Flashcard = ({ flashcard, isSelected, onClick }) => {
     const handleCardClick = () => {
