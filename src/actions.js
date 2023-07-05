@@ -5,12 +5,9 @@ export const selectFlashcard = (flashcardId) => {
     };
 };
 
-export const addFlashCard = (flashcard) => (dispatch, getState) => {
-    const state = getState();
-    const flashcards = state.flashcards;
-    flashcards.add(flashcard);
-    dispatch({
+export const addFlashcard = (flashcard) => {
+    return {
         type: 'ADD_FLASHCARD',
-        payload: flashcards,
-    });
-}
+        payload: flashcard,
+    };
+};

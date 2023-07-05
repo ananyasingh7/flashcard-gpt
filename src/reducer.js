@@ -2,21 +2,7 @@
 
 const initialState = {
   flashcards: [
-    {
-      id: 1,
-      title: 'Flashcard 1',
-      description: 'This is the content of Flashcard 1.',
-    },
-    {
-      id: 2,
-      title: 'Flashcard 2',
-      description: 'This is the content of Flashcard 2.',
-    },
-    {
-      id: 3,
-      title: 'Flashcard 3',
-      description: 'This is the content of Flashcard 3.',
-    },
+    
     // Add more flashcards as needed
   ],
   selectedFlashcard: null
@@ -32,8 +18,11 @@ const reducer = (state = initialState, action) => {
     case 'ADD_FLASHCARD':
       return {
         ...state,
-        flashcards: action.payload
-      }
+        flashcards: [
+          ...state.flashcards,
+          { ...action.payload, index: state.flashcards.length +1 } 
+        ]
+      };
     default:
       return state;
   }

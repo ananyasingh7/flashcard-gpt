@@ -1,26 +1,23 @@
 import React from 'react';
-import '../index.css';
+import { connect } from 'react-redux';
 
-const Flashcard = ({ flashcard, isSelected, onClick }) => {
-    const handleCardClick = () => {
-        onClick(flashcard.id);
-    };
-
+const Flashcard = ({ flashcards }) => {
     return (
-        <div
-            className={`flashcard ${isSelected ? 'selected' : ''}`}
-            onClick={handleCardClick}
-        >
-            <div className="flashcard-content">
-                <div className="flashcard-front">
-                    <h2>{flashcard.title}</h2>
+        <div className="flashcard-list">
+            {flashcards.map((flashcard) => (
+                <div className="flashcard" key={flashcard.index}>
+                    <p>{flashcard.question}</p>
+                    <p>{flashcard.answer}</p>
                 </div>
-                <div className="flashcard-back">
-                    <p>{flashcard.description}</p>
-                </div>
-            </div>
+            ))}
         </div>
     );
 };
 
-export default Flashcard;
+const mapStateToProps = (state) => {
+    return {
+        flashcards: state.flashcards,
+    };
+};
+
+export default connect(mapStateToProps)(Flashcard);

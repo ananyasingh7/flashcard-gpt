@@ -1,29 +1,38 @@
 import React from 'react';
-import { useSelector, useDispatch } from 'react-redux';
-import Flashcard from './Flashcard';
-import { selectFlashcard } from '../actions';
+import { connect } from 'react-redux';
+import { addFlashcard } from '../actions';
+import '../index.css';
 
-const FlashcardList = () => {
-  const flashcards = useSelector((state) => state.flashcards);
-  const selectedFlashcard = useSelector((state) => state.selectedFlashcard);
-  const dispatch = useDispatch();
-
-  const handleFlashcardClick = (flashcardId) => {
-    dispatch(selectFlashcard(flashcardId));
+const FlashcardList = ({ flashcards, addFlashcard }) => {
+  const handleClick = () => {
+    const newFlashcard = {
+      question: 'New Question',
+      answer: 'New Answer',
+    };
+    addFlashcard(newFlashcard);
   };
 
   return (
-    <div className="flashcard-list">
-      {flashcards.map((flashcard) => (
-        <Flashcard
-          key={flashcard.id}
-          flashcard={flashcard}
-          isSelected={selectedFlashcard === flashcard.id}
-          onClick={handleFlashcardClick}
-        />
-      ))}
+    <div>
+      <button className="button" onClick={handleClick}>
+        Add Flashcard
+      </button>
+      <div className="flashcard-list">
+        {flashcards.map((flashcard) => (
+          <div className="flashcard" key={flashcard.index}>
+            <p className="flashcard-question">{flashcard.question}</p>
+            <p className="flashcard-answer">{flashcard.answer}</p>
+          </div>
+        ))}
+      </div>
     </div>
   );
 };
 
-export default FlashcardList;
+const mapStateToProps = (state) => {
+  return {
+    flashcards: state.flashcards,
+  };
+};
+
+export default connect(mapStateToProps, { addFlashcard })(FlashcardList);

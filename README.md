@@ -20,6 +20,7 @@ The project is currently in its early stages, with minimal commits. The focus is
 - Integration with PostgreSQL for data storage and retrieval
 - Exploratory integration with MongoDB for expanded functionality
 - Electron.js integration for desktop application development
+- Leverage the full functionality of what AWS has to offer
 
 ## Getting Started
 

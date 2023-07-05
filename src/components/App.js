@@ -1,28 +1,11 @@
 import React from 'react';
-import { useSelector } from 'react-redux';
 import FlashcardList from './FlashcardList';
-import { addFlashCard } from '../actions';
 
 const App = () => {
-  const flashcards = useSelector((state) => state.flashcards);
-
-  const handleButtonClick = () => (dispatch) => {
-    dispatch(addFlashCard({
-      id: 4,
-      title: 'Flashcard 4',
-      description: 'This is the content of Flashcard 4.',
-    },));
-  };
-
   return (
-    <div className="App">
-      <h1>Flashcard App</h1>
-      <div className="button-container">
-        <button className="button" onClick={handleButtonClick}>
-          Click Me
-        </button>
-      </div>
-      <FlashcardList flashcards={flashcards}/>
+    <div className="container mx-auto p-4">
+      <h1 className="text-2xl font-bold mb-4">Flashcard-GPT</h1>
+      <FlashcardList />
     </div>
   );
 };
