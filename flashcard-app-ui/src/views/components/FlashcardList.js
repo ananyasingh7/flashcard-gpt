@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { addFlashcard } from '../actions';
-import '../index.css';
+import { addFlashcard } from '../../models/reducers/actions';
+import '../../index.css';
 
 const FlashcardList = ({ flashcards, addFlashcard }) => {
   const handleClick = () => {
