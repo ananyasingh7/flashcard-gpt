@@ -5,7 +5,7 @@ Flashcard-GPT is an AI-based application designed to assist students in generati
 ## Tech Stack
 
 - Front-end: React, Redux, Tailwind CSS
-- Backend: PostgreSQL, MongoDB
+- Backend: PostgreSQL, MongoDB, Spring Boot
 - AI: ChatGPT
 - Additional Technologies: Electron.js, Caching (Currently exploring)
 
